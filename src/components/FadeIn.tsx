@@ -7,7 +7,6 @@ interface FadeInProps extends HTMLMotionProps<'div'> {
   duration?: number;
   x?: number;
   y?: number;
-  as?: keyof React.JSX.IntrinsicElements;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -18,20 +17,14 @@ export const FadeIn: React.FC<FadeInProps> = ({
   duration = 0.7,
   x = 0,
   y = 30,
-  as = 'div',
   className = '',
   style = {},
   ...rest
 }) => {
-  // Use motion.create if available, fallback to motion[tag] or motion.div
-  const Component = typeof motion.create === 'function'
-    ? motion.create(as as keyof React.JSX.IntrinsicElements)
-    : ((motion as unknown as Record<string, unknown>)[as] || motion.div);
-
-  const MotionTag = Component as React.ElementType;
-
+  // Always the same motion.div: a component created during render would remount
+  // on every parent re-render (e.g. on scroll) and restart the fade from invisible.
   return (
-    <MotionTag
+    <motion.div
       initial={{ opacity: 0, x, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: '50px', amount: 0 }}
@@ -45,7 +38,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
       {...rest}
     >
       {children}
-    </MotionTag>
+    </motion.div>
   );
 };
 

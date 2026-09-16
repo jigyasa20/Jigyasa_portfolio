@@ -2,7 +2,7 @@ import React from 'react';
 import FadeIn from '../FadeIn';
 import Magnet from '../Magnet';
 import ContactButton from '../ContactButton';
-import jigyasaHero from '../../assets/jigyasa_hero.png';
+import jigyasaHero from '../../assets/jigyasa_hero.webp';
 
 interface HeroSectionProps {
   onOpenContact: () => void;
@@ -71,11 +71,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
       <div className="w-full flex justify-center text-center z-10 pointer-events-none px-4 sm:px-6">
         <FadeIn delay={0.15} y={30} duration={0.9} className="w-full max-w-[100vw]">
           <h1
-            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center select-none mt-4 sm:mt-6 md:mt-8"
-            style={{
-              fontSize: 'clamp(2.4rem, 9.2vw, 9.6rem)',
-              letterSpacing: '-0.02em',
-            }}
+            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center select-none mt-4 sm:mt-6 md:mt-8 text-[12.5vw] sm:text-[clamp(2.4rem,9.2vw,9.6rem)]"
+            style={{ letterSpacing: '-0.02em' }}
           >
             Hi, i&apos;m jigyasa
           </h1>
@@ -90,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             strength={3}
             activeTransition="transform 0.3s ease-out"
             inactiveTransition="transform 0.6s ease-in-out"
-            className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[480px] flex items-end justify-center"
+            className="relative w-[115vw] max-w-[460px] sm:w-[360px] sm:max-w-none md:w-[420px] lg:w-[480px] flex items-end justify-center"
           >
             <img
               src={jigyasaHero}
@@ -101,6 +98,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           </Magnet>
         </FadeIn>
       </div>
+
+      {/* Phones: fade the photo's lower edge so the tagline stays readable */}
+      <div className="sm:hidden absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0C0C0C] via-[#0C0C0C]/80 to-transparent z-20 pointer-events-none" />
 
       {/* 4. Bottom Bar */}
       <div className="w-full flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-12 mt-auto z-30">

@@ -46,11 +46,14 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = () => {
   const row1Tripled = [...row1, ...row1, ...row1];
   const row2Tripled = [...row2, ...row2, ...row2];
 
-  const row1Transform = `translateX(${offset - 150}px)`;
-  const row2Transform = `translateX(${-(offset - 150)}px)`;
+  // Both rows start shifted left so their left edge never shows an empty gap while sliding.
+  const row1Transform = `translateX(${offset - 700}px)`;
+  const row2Transform = `translateX(${-offset - 150}px)`;
 
   const renderVideoCard = (video: VideoShowcaseItem, idx: number, prefix: string) => {
-    const isMp4 = video.videoUrl && video.videoUrl.includes('.mp4');
+    // X's video host (video.twimg.com) refuses playback on other sites, so those
+    // cards show their thumbnail instead. Self-hosted .mp4 files still autoplay.
+    const isMp4 = video.videoUrl?.includes('.mp4') && !video.videoUrl.includes('twimg.com');
     const targetUrl = video.externalLink || video.videoUrl;
     const isX = video.platform.toLowerCase().includes('twitter') || video.platform.toLowerCase().includes('x');
 

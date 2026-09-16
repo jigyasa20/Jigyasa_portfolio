@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeIn from '../FadeIn';
+import CountUp from '../CountUp';
 import { SOCIAL_ANALYTICS } from '../../data/analytics';
 import { TrendingUp, Sparkles, ExternalLink, ShieldCheck, Eye, Users, BarChart3, Activity } from 'lucide-react';
 
@@ -97,7 +98,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                     <span>Views &amp; Impressions</span>
                   </span>
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-                    {overview.totalViewsAndImpressions}
+                    <CountUp value={overview.totalViewsAndImpressions} />
                   </span>
                   <span className="text-[11px] sm:text-xs text-zinc-500 mt-2 font-mono">
                     4.23M YT + 554.5K IG + 421.7K X
@@ -111,7 +112,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                     <span>Dedicated Community</span>
                   </span>
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-                    {overview.totalCommunity}
+                    <CountUp value={overview.totalCommunity} />
                   </span>
                   <span className="text-[11px] sm:text-xs text-zinc-500 mt-2 font-mono">
                     Subscribers &amp; Followers
@@ -125,7 +126,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                     <span>Viewers &amp; Reach</span>
                   </span>
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-                    {overview.totalReachAndViewers}
+                    <CountUp value={overview.totalReachAndViewers} />
                   </span>
                   <span className="text-[11px] sm:text-xs text-zinc-500 mt-2 font-mono">
                     Across campaign releases
@@ -139,7 +140,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                     <span>Average Engagement</span>
                   </span>
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-                    {overview.avgEngagement}
+                    <CountUp value={overview.avgEngagement} />
                   </span>
                   <span className="text-[11px] sm:text-xs text-zinc-500 mt-2 font-mono">
                     ~3x above 1.5% creator average
@@ -199,7 +200,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                   {/* Big Followers Hero Box */}
                   <div className="mb-4 p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/60 text-center">
                     <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                      {platform.followers}
+                      <CountUp value={platform.followers} />
                     </span>
                     <span className="block text-xs uppercase tracking-[0.2em] text-zinc-400 mt-1 font-semibold">
                       {platform.followersLabel}
@@ -213,7 +214,7 @@ export const SocialAnalyticsSection: React.FC = () => {
                         {platform.viewsLabel}
                       </span>
                       <span className="text-base sm:text-lg font-bold text-white font-mono">
-                        {platform.views}
+                        <CountUp value={platform.views} />
                       </span>
                     </div>
                   </div>
