@@ -34,14 +34,14 @@ export function App() {
       {/* 2. Social Media Videos Showcase (Clickable video cards with modal player) */}
       <SocialVideosSection onSelectVideo={handleSelectVideo} />
 
-      {/* 3. Social Media Analytics (Views, followers, brand collabs & platform stats) */}
+      {/* 3. Brand Logo Wall ("Projects I've worked with" - single line ticker) */}
+      <BrandLogoWall />
+
+      {/* 4. Social Media Analytics (Views, followers, brand collabs & platform stats) */}
       <SocialAnalyticsSection />
 
-      {/* 4. About Section (Natural, conversational storytelling) */}
+      {/* 5. About Section (Natural, conversational storytelling) */}
       <AboutSection onOpenContact={handleOpenContact} />
-
-      {/* 5. Brand Logo Wall ("Projects I've worked with" - single line ticker) */}
-      <BrandLogoWall />
 
       {/* Footer */}
       <Footer onOpenContact={handleOpenContact} />
