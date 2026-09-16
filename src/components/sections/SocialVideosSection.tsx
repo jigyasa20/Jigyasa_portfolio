@@ -69,11 +69,7 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
             Content That Gets Noticed
           </h2>
         </FadeIn>
-        <FadeIn delay={0.15} y={20} className="max-w-md">
-          <p className="text-xs sm:text-sm text-zinc-300 font-light uppercase tracking-wider leading-relaxed">
-            WEB3 Content, Brand/Founder&apos;s Stories, Event Coverage, Travel and Social Campaigns built to get people talking
-          </p>
-        </FadeIn>
+
       </div>
 
       {/* Dual Row Interactive Video Showcase */}

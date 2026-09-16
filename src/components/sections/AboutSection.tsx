@@ -14,54 +14,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
       id="about"
       className="relative min-h-screen w-full flex flex-col items-center justify-center px-5 sm:px-8 md:px-12 lg:px-16 py-24 sm:py-32 md:py-36 bg-[#0C0C0C] overflow-hidden"
     >
-      {/* 4 Decorative 3D images in corners */}
-      <div className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[3%] z-0 pointer-events-none opacity-40 sm:opacity-80">
-        <FadeIn delay={0.1} x={-60} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png"
-            alt="3D Moon Decorative"
-            loading="lazy"
-            draggable={false}
-            className="w-[100px] sm:w-[140px] md:w-[180px] h-auto object-contain select-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
-          />
-        </FadeIn>
-      </div>
 
-      <div className="absolute bottom-[6%] left-[2%] sm:left-[4%] md:left-[6%] z-0 pointer-events-none opacity-40 sm:opacity-80">
-        <FadeIn delay={0.25} x={-60} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png"
-            alt="3D Object Decorative"
-            loading="lazy"
-            draggable={false}
-            className="w-[90px] sm:w-[120px] md:w-[150px] h-auto object-contain select-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
-          />
-        </FadeIn>
-      </div>
-
-      <div className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[3%] z-0 pointer-events-none opacity-40 sm:opacity-80">
-        <FadeIn delay={0.15} x={60} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png"
-            alt="3D Lego Decorative"
-            loading="lazy"
-            draggable={false}
-            className="w-[100px] sm:w-[140px] md:w-[180px] h-auto object-contain select-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
-          />
-        </FadeIn>
-      </div>
-
-      <div className="absolute bottom-[6%] right-[2%] sm:right-[4%] md:right-[6%] z-0 pointer-events-none opacity-40 sm:opacity-80">
-        <FadeIn delay={0.3} x={60} y={0} duration={0.9}>
-          <img
-            src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png"
-            alt="3D Group Decorative"
-            loading="lazy"
-            draggable={false}
-            className="w-[110px] sm:w-[140px] md:w-[180px] h-auto object-contain select-none drop-shadow-[0_15px_35px_rgba(0,0,0,0.6)]"
-          />
-        </FadeIn>
-      </div>
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto w-full">
