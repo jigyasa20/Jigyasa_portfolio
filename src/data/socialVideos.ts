@@ -4,7 +4,7 @@ import thumbEthmumbai from '../assets/videos/thumb_ethmumbai.jpg';
 import thumbRemittance from '../assets/videos/thumb_remittance.jpg';
 import thumbFhenix from '../assets/videos/thumb_fhenix.jpg';
 import thumbEvents from '../assets/videos/thumb_events.jpg';
-import thumbDiwali from '../assets/videos/thumb_diwali.jpg';
+import thumbSeraProtocol from '../assets/videos/thumb_seraprotocol.jpg';
 import thumbGoa from '../assets/videos/thumb_goa.jpg';
 import thumbHeritage from '../assets/videos/thumb_heritage.jpg';
 
@@ -20,8 +20,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbHuddle,
     videoUrl: 'https://video.twimg.com/amplify_video/2019281423266357248/vid/avc1/1920x1080/lzbkoujzXjQ_97sT.mp4',
     externalLink: 'https://x.com/jigyasa_0203/status/2019281702678589479?s=20',
-    views: '42.5K',
-    likes: '3.1K',
     duration: '1:33',
     tags: ['web3', 'depin', 'huddle01'],
   },
@@ -32,8 +30,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbEthmumbai,
     videoUrl: 'https://video.twimg.com/amplify_video/2038542891577167872/vid/avc1/1430x820/TrwuvBeQEbzicYzZ.mp4',
     externalLink: 'https://x.com/jigyasa_0203/status/2038543014050812383?s=20',
-    views: '28.4K',
-    likes: '1.9K',
     duration: '0:37',
     tags: ['ethmumbai', 'web3', 'recap'],
   },
@@ -44,8 +40,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbRemittance,
     videoUrl: 'https://video.twimg.com/amplify_video/2062899183313698817/vid/avc1/1920x1080/8U-R3x8iOwCIv6Na.mp4',
     externalLink: 'https://x.com/jigyasa_0203/status/2062899362687262878?s=20',
-    views: '65.2K',
-    likes: '4.8K',
     duration: '1:28',
     tags: ['fintech', 'remittance', 'stellar'],
   },
@@ -56,8 +50,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbFhenix,
     videoUrl: 'https://video.twimg.com/amplify_video/2076996066151677952/vid/avc1/1080x1920/z9qzhOf2STuQCk4T.mp4',
     externalLink: 'https://x.com/jigyasa_0203/status/2076996300000886900?s=20',
-    views: '34.8K',
-    likes: '2.6K',
     duration: '1:20',
     tags: ['fhenix', 'events', 'sunscreen'],
   },
@@ -68,22 +60,18 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbEvents,
     videoUrl: 'https://video.twimg.com/amplify_video/2087090316562362368/vid/avc1/1278x720/xoc7rv51DaEHN8l3.mp4',
     externalLink: 'https://x.com/jigyasa_0203/status/2087090370937295162?s=20',
-    views: '51.3K',
-    likes: '3.9K',
     duration: '0:30',
     tags: ['events', 'networking', 'rewards'],
   },
   {
     id: 'vid-6',
-    title: 'Diwali Celebrations & Cultural Story',
-    platform: 'YouTube',
-    thumbnailUrl: thumbDiwali,
-    videoUrl: 'https://www.youtube.com/watch?v=DpKIYUzGB5k',
-    externalLink: 'https://youtube.com/shorts/DpKIYUzGB5k?si=4WR2_jncO61fIm5C',
-    views: '1.2M',
-    likes: '85K',
-    duration: '0:45',
-    tags: ['diwali', 'celebration', 'storiesbyraahi'],
+    title: 'Deep Dive into Sera Protocol | Content & Brand Story',
+    platform: 'Twitter / X',
+    thumbnailUrl: thumbSeraProtocol,
+    videoUrl: 'https://video.twimg.com/amplify_video/2085731021539115008/vid/avc1/1920x1080/qCZWS8Sjkt-jd8dM.mp4',
+    externalLink: 'https://x.com/jigyasa_0203/status/2085731373298725371?s=20',
+    duration: '1:12',
+    tags: ['seraprotocol', 'web3', 'storytelling'],
   },
   {
     id: 'vid-7',
@@ -92,8 +80,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbGoa,
     videoUrl: 'https://www.instagram.com/reel/DUu7fgLDIJ3/',
     externalLink: 'https://www.instagram.com/reel/DUu7fgLDIJ3/?stkn=aWJ6dnJ1Z2Vqdncz',
-    views: '210K',
-    likes: '14.5K',
     duration: '0:35',
     tags: ['travel', 'goa', 'solotravel'],
   },
@@ -104,8 +90,6 @@ export const SOCIAL_VIDEOS: VideoShowcaseItem[] = [
     thumbnailUrl: thumbHeritage,
     videoUrl: 'https://www.instagram.com/reel/DYteA8wSRlW/',
     externalLink: 'https://www.instagram.com/reel/DYteA8wSRlW/?stkn=OTcwYTd1cDlucXZz',
-    views: '180K',
-    likes: '12.2K',
     duration: '0:40',
     tags: ['travel', 'heritage', 'storiesbyraahi'],
   },

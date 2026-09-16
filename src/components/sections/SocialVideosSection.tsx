@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Play, Sparkles, Eye, Heart } from 'lucide-react';
+import { Play, Sparkles } from 'lucide-react';
 import { SOCIAL_VIDEOS, type VideoShowcaseItem } from '../../data/socialVideos';
 import FadeIn from '../FadeIn';
 
@@ -119,25 +119,11 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
                 </div>
               </div>
 
-              {/* Bottom Title & Stats */}
+              {/* Bottom Title */}
               <div className="absolute bottom-4 left-4 right-4 z-10">
                 <h3 className="text-sm sm:text-base font-semibold text-white truncate group-hover:text-pink-200 transition-colors">
                   {video.title}
                 </h3>
-                <div className="flex items-center gap-3 mt-1.5 text-[11px] text-zinc-400 font-mono">
-                  {video.views && (
-                    <span className="flex items-center gap-1">
-                      <Eye className="w-3 h-3" />
-                      {video.views}
-                    </span>
-                  )}
-                  {video.likes && (
-                    <span className="flex items-center gap-1">
-                      <Heart className="w-3 h-3 text-pink-400" />
-                      {video.likes}
-                    </span>
-                  )}
-                </div>
               </div>
             </div>
           ))}
@@ -188,25 +174,11 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
                 </div>
               </div>
 
-              {/* Bottom Title & Stats */}
+              {/* Bottom Title */}
               <div className="absolute bottom-4 left-4 right-4 z-10">
                 <h3 className="text-sm sm:text-base font-semibold text-white truncate group-hover:text-pink-200 transition-colors">
                   {video.title}
                 </h3>
-                <div className="flex items-center gap-3 mt-1.5 text-[11px] text-zinc-400 font-mono">
-                  {video.views && (
-                    <span className="flex items-center gap-1">
-                      <Eye className="w-3 h-3" />
-                      {video.views}
-                    </span>
-                  )}
-                  {video.likes && (
-                    <span className="flex items-center gap-1">
-                      <Heart className="w-3 h-3 text-pink-400" />
-                      {video.likes}
-                    </span>
-                  )}
-                </div>
               </div>
             </div>
           ))}

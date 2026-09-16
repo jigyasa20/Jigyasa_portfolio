@@ -8,8 +8,6 @@ export interface SocialVideo {
   platform: 'Instagram' | 'TikTok' | 'YouTube' | 'Reels' | 'Twitter / X';
   thumbnailUrl: string;
   videoUrl: string;
-  views?: string;
-  likes?: string;
   externalLink?: string;
   tags?: string[];
 }
@@ -154,21 +152,15 @@ export const VideoModal: React.FC<VideoModalProps> = ({ video, onClose }) => {
           </div>
 
           {/* Footer Info */}
-          <div className="px-6 py-4 flex flex-wrap items-center justify-between gap-3 bg-zinc-950/80 text-xs text-zinc-400">
-            <div className="flex items-center gap-4">
-              {video.views && <span>👁 {video.views} views</span>}
-              {video.likes && <span>❤️ {video.likes} likes</span>}
+          {video.tags && video.tags.length > 0 && (
+            <div className="px-6 py-3 flex items-center gap-2 flex-wrap bg-zinc-950/80 text-xs text-zinc-500">
+              {video.tags.map((tag, idx) => (
+                <span key={idx} className="font-mono">
+                  #{tag}
+                </span>
+              ))}
             </div>
-            {video.tags && video.tags.length > 0 && (
-              <div className="flex items-center gap-2 flex-wrap">
-                {video.tags.map((tag, idx) => (
-                  <span key={idx} className="text-zinc-500 font-mono">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
+          )}
         </motion.div>
       </div>
     </AnimatePresence>
