@@ -11,7 +11,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 bg-[#0C0C0C] overflow-hidden"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-24 sm:py-32 md:py-40 bg-[#0C0C0C] overflow-hidden"
     >
       {/* 4 Decorative 3D images in corners */}
       {/* 1. Top-left: Moon icon */}

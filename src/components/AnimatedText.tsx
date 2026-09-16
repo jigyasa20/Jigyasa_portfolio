@@ -42,16 +42,32 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '' }) =>
     offset: ['start 0.8', 'end 0.2'],
   });
 
-  // Natural, human, and casual copy
+  // Jigyasa's exact copy (strictly zero em dashes)
   const paragraphs = useMemo(() => {
     return [
       {
+        isBold: true,
+        text: "I'm the person you call when your project needs more than another pretty post on the timeline.",
+      },
+      {
         isBold: false,
-        text: "Over the last couple of years, I’ve been living somewhere between 3D worlds, Web3 culture, fashion shoots, late-night renders, and way too many chats with inspiring people. I like making wild ideas look effortless, feel deeply human, and cut straight through the endless digital noise.",
+        text: "I make video content that hits, write tweets that make people stop scrolling, take projects to a wider CT audience, and turn real-world experiences into content people actually want to watch.",
+      },
+      {
+        isBold: false,
+        text: "I've worked across content, growth marketing, community, partnerships, events and business development - which basically means I know how to get a project in front of the right people and give them a reason to care.",
       },
       {
         isBold: true,
-        text: "Let’s make something people actually remember.",
+        text: "And then there's the travel part.",
+      },
+      {
+        isBold: false,
+        text: "I’m constantly moving, meeting new people, going to events, discovering new places and finding stories along the way. So if your brand needs someone who can take it from the internet to the real world - and back again - that's where I come in.",
+      },
+      {
+        isBold: false,
+        text: "From turning your product into scroll-stopping videos, covering your event on the ground, building conversations around your brand, running campaigns, or opening doors to the right people. I make noise, create visibility, and turn attention into something useful.",
       },
     ];
   }, []);
@@ -65,9 +81,10 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '' }) =>
   return (
     <div
       ref={containerRef}
-      className={`text-center font-medium leading-relaxed max-w-[580px] mx-auto text-[#D7E2EA] ${className}`}
+      className={`text-center font-normal leading-relaxed max-w-[760px] mx-auto text-[#D7E2EA] ${className}`}
       style={{
-        fontSize: 'clamp(1rem, 2vw, 1.35rem)',
+        fontSize: 'clamp(1.05rem, 2.1vw, 1.4rem)',
+        lineHeight: 1.75,
       }}
     >
       {paragraphs.map((p, pIdx) => {
@@ -76,7 +93,9 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '' }) =>
         return (
           <p
             key={pIdx}
-            className={`${pIdx > 0 ? 'mt-4 sm:mt-6' : ''} ${p.isBold ? 'font-bold text-white tracking-wide' : ''}`}
+            className={`${pIdx > 0 ? 'mt-6 sm:mt-8 md:mt-10' : ''} ${
+              p.isBold ? 'font-bold text-white tracking-wide text-lg sm:text-xl md:text-2xl' : 'text-[#D7E2EA]/90'
+            }`}
           >
             {words.map((word, wIdx) => {
               const wordChars = word.split('');
