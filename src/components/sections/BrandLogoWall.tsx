@@ -2,95 +2,125 @@ import React from 'react';
 import FadeIn from '../FadeIn';
 import { Sparkles } from 'lucide-react';
 
+// Brand logos imported from assets (taken from Logo folder)
+import baseLogo from '../../assets/brands/Base.png';
+import bybitLogo from '../../assets/brands/Bybit.jpg';
+import cakeWalletLogo from '../../assets/brands/Cake Wallet.jpg';
+import dabbaLogo from '../../assets/brands/Dabba Network.jpg';
+import fhenixLogo from '../../assets/brands/Fhenix.jpg';
+import huddleLogo from '../../assets/brands/Huddle.jpg';
+import seraLogo from '../../assets/brands/Sera Protocol.png';
+import stellarLogo from '../../assets/brands/Stellar.jpg';
+
 interface BrandItem {
   name: string;
   category: string;
-  symbol: string;
+  logo: string;
 }
 
 const BRANDS: BrandItem[] = [
-  { name: 'Polygon', category: 'Web3 & L2', symbol: '⬡' },
-  { name: 'Unreal Engine', category: 'Real-time 3D', symbol: '✦' },
-  { name: 'Solana', category: 'Ecosystem', symbol: '◎' },
-  { name: 'Blender', category: '3D Creation', symbol: '❖' },
-  { name: 'Adidas', category: 'Apparel & Renders', symbol: '▲' },
-  { name: 'Nike', category: 'Digital Footwear', symbol: '✔' },
-  { name: 'Red Bull', category: 'Media & Energy', symbol: '⚡' },
-  { name: 'Spotify', category: 'Spatial Audio', symbol: '●' },
-  { name: 'Binance', category: 'Crypto & Web3', symbol: '⯁' },
-  { name: 'Prada', category: 'Luxury 3D Renders', symbol: '◆' },
-  { name: 'Figma', category: 'Design Systems', symbol: '◰' },
-  { name: 'VaynerMedia', category: 'Content Campaigns', symbol: '★' },
+  { name: 'Base', category: 'Coinbase L2', logo: baseLogo },
+  { name: 'Bybit', category: 'Crypto Exchange', logo: bybitLogo },
+  { name: 'Cake Wallet', category: 'DeFi & Mobile', logo: cakeWalletLogo },
+  { name: 'Dabba Network', category: 'DePIN Connectivity', logo: dabbaLogo },
+  { name: 'Fhenix', category: 'Confidential FHE', logo: fhenixLogo },
+  { name: 'Huddle01', category: 'Decentralized Audio/Video', logo: huddleLogo },
+  { name: 'Sera Protocol', category: 'AI & Data Ecosystem', logo: seraLogo },
+  { name: 'Stellar', category: 'Global Financial Network', logo: stellarLogo },
 ];
 
-export const BrandLogoWall: React.FC = () => {
-  const tickerBrands = [...BRANDS, ...BRANDS, ...BRANDS];
+// Tripled array for seamless infinite moving ticker
+const TICKER_ROW_1 = [...BRANDS, ...BRANDS, ...BRANDS];
+const TICKER_ROW_2 = [...BRANDS.slice(4), ...BRANDS.slice(0, 4), ...BRANDS, ...BRANDS];
 
+export const BrandLogoWall: React.FC = () => {
   return (
     <section
       id="brands"
-      className="w-full bg-white text-[#0C0C0C] pt-6 pb-24 sm:pb-28 md:pb-32 px-5 sm:px-8 md:px-10 relative z-0"
+      className="w-full bg-white text-[#0C0C0C] pt-10 pb-24 sm:pb-28 md:pb-36 overflow-hidden relative z-0"
     >
-      <div className="max-w-6xl mx-auto w-full">
-        {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
+      <div className="max-w-7xl mx-auto w-full px-5 sm:px-8 mb-12 sm:mb-16">
+        {/* Header with requested title */}
+        <div className="text-center max-w-3xl mx-auto">
           <FadeIn delay={0} y={20}>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-mono uppercase tracking-widest text-[#0C0C0C]/70 mb-3">
               <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-              <span>Proven Collaborations</span>
+              <span>Collaborations &amp; Partners</span>
             </div>
             <h2
               className="text-[#0C0C0C] font-black uppercase tracking-tight leading-none text-center"
-              style={{ fontSize: 'clamp(2.4rem, 6vw, 5.5rem)' }}
+              style={{ fontSize: 'clamp(2.4rem, 6vw, 5.2rem)' }}
             >
-              Teams I&apos;ve Created For
+              Projects i&apos;ve worked with
             </h2>
-            <p className="mt-3 text-xs sm:text-sm md:text-base text-[#0C0C0C]/65 max-w-xl mx-auto font-light leading-relaxed">
-              From global athletic brands and gaming powerhouses to decentralized protocols - here are some teams I’ve had the fun of creating with.
+            <p className="mt-4 text-xs sm:text-sm md:text-base text-[#0C0C0C]/65 max-w-xl mx-auto font-light leading-relaxed">
+              From decentralized networks and Web3 ecosystems to real-time communication protocols - here are some of the teams I’ve created for.
             </p>
           </FadeIn>
         </div>
+      </div>
 
-        {/* Interactive Logo Wall Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {BRANDS.map((brand, idx) => (
-            <FadeIn
-              key={`brand-${idx}`}
-              delay={idx * 0.04}
-              y={20}
-              className="h-full"
+      {/* Moving Brand Logo Ticker (Row 1: Moves Left) */}
+      <div className="w-full overflow-hidden py-3 border-t border-black/10">
+        <div className="flex w-max animate-marquee select-none items-center">
+          {TICKER_ROW_1.map((brand, i) => (
+            <div
+              key={`ticker-row1-${i}`}
+              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 group cursor-pointer"
             >
-              <div className="group h-full p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-black/10 bg-black/[0.02] hover:bg-black hover:text-white transition-all duration-300 flex flex-col justify-between items-center text-center cursor-default shadow-sm hover:shadow-xl hover:-translate-y-1">
-                <div className="text-2xl sm:text-3xl mb-3 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all text-purple-600 group-hover:text-pink-400">
-                  {brand.symbol}
-                </div>
-                <div>
-                  <h3 className="font-bold text-base sm:text-lg tracking-tight uppercase group-hover:text-white transition-colors">
-                    {brand.name}
-                  </h3>
-                  <span className="text-[11px] sm:text-xs text-black/50 group-hover:text-zinc-400 uppercase tracking-wider block mt-1 transition-colors">
-                    {brand.category}
-                  </span>
-                </div>
+              {/* Logo Card */}
+              <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-26 md:h-26 rounded-2xl sm:rounded-3xl overflow-hidden border border-black/10 bg-zinc-50 p-3 sm:p-4 shadow-sm group-hover:shadow-xl group-hover:border-purple-500/50 group-hover:scale-108 transition-all duration-300 flex items-center justify-center">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  loading="lazy"
+                  className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            </FadeIn>
+
+              {/* Brand Name Below Logo */}
+              <span className="mt-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0C0C0C] group-hover:text-purple-600 transition-colors text-center whitespace-nowrap">
+                {brand.name}
+              </span>
+
+              {/* Category / Detail */}
+              <span className="text-[10px] sm:text-[11px] text-zinc-500 font-light tracking-wide text-center whitespace-nowrap">
+                {brand.category}
+              </span>
+            </div>
           ))}
         </div>
+      </div>
 
-        {/* Continuous Marquee Ticker */}
-        <div className="mt-12 sm:mt-16 overflow-hidden py-4 border-t border-b border-black/10">
-          <div className="flex gap-8 w-max animate-marquee select-none">
-            {tickerBrands.map((brand, i) => (
-              <div
-                key={`ticker-${i}`}
-                className="flex items-center gap-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#0C0C0C]/40 hover:text-[#0C0C0C] transition-colors"
-              >
-                <span>{brand.symbol}</span>
-                <span>{brand.name}</span>
-                <span className="text-purple-500">•</span>
+      {/* Moving Brand Logo Ticker (Row 2: Reverse Movement) */}
+      <div className="w-full overflow-hidden py-4 border-b border-black/10 mt-3">
+        <div className="flex w-max animate-marquee-reverse select-none items-center">
+          {TICKER_ROW_2.map((brand, i) => (
+            <div
+              key={`ticker-row2-${i}`}
+              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 group cursor-pointer"
+            >
+              {/* Logo Card */}
+              <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-26 md:h-26 rounded-2xl sm:rounded-3xl overflow-hidden border border-black/10 bg-zinc-50 p-3 sm:p-4 shadow-sm group-hover:shadow-xl group-hover:border-pink-500/50 group-hover:scale-108 transition-all duration-300 flex items-center justify-center">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  loading="lazy"
+                  className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            ))}
-          </div>
+
+              {/* Brand Name Below Logo */}
+              <span className="mt-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0C0C0C] group-hover:text-pink-600 transition-colors text-center whitespace-nowrap">
+                {brand.name}
+              </span>
+
+              {/* Category / Detail */}
+              <span className="text-[10px] sm:text-[11px] text-zinc-500 font-light tracking-wide text-center whitespace-nowrap">
+                {brand.category}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

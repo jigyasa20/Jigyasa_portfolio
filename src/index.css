@@ -47,6 +47,15 @@ html {
   }
 }
 
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-33.3333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .animate-marquee {
   display: flex;
   animation: marquee 35s linear infinite;
@@ -54,6 +63,16 @@ html {
 }
 
 .animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  animation: marquee-reverse 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
 
