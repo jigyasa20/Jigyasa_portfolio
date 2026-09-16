@@ -37,11 +37,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             About
           </a>
           <a
-            href="#services"
-            onClick={(e) => handleNavClick(e, 'services')}
+            href="#videos"
+            onClick={(e) => handleNavClick(e, 'videos')}
             className="transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
-            Services
+            Content
           </a>
           <a
             href="#stats"
@@ -51,8 +51,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             Impact
           </a>
           <a
-            href="#projects"
-            onClick={(e) => handleNavClick(e, 'projects')}
+            href="#brands"
+            onClick={(e) => handleNavClick(e, 'brands')}
             className="transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
             Projects

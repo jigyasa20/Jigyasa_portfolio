@@ -3,9 +3,7 @@ import HeroSection from './components/sections/HeroSection';
 import SocialVideosSection from './components/sections/SocialVideosSection';
 import SocialAnalyticsSection from './components/sections/SocialAnalyticsSection';
 import AboutSection from './components/sections/AboutSection';
-import ServicesSection from './components/sections/ServicesSection';
 import BrandLogoWall from './components/sections/BrandLogoWall';
-import ProjectsSection from './components/sections/ProjectsSection';
 import ContactModal from './components/ContactModal';
 import VideoModal, { type SocialVideo } from './components/VideoModal';
 import Footer from './components/Footer';
@@ -42,14 +40,8 @@ export function App() {
       {/* 4. About Section (Natural, conversational storytelling) */}
       <AboutSection onOpenContact={handleOpenContact} />
 
-      {/* 5. Services Section (Casual, human client offerings) */}
-      <ServicesSection />
-
-      {/* 6. Brand Logo Wall (Immediately after Services) */}
+      {/* 5. Brand Logo Wall ("Projects I've worked with" - single line ticker) */}
       <BrandLogoWall />
-
-      {/* 7. Projects Section (Sticky stacking scale cards) */}
-      <ProjectsSection />
 
       {/* Footer */}
       <Footer onOpenContact={handleOpenContact} />

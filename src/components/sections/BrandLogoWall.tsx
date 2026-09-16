@@ -1,7 +1,5 @@
 import React from 'react';
 import FadeIn from '../FadeIn';
-import { Sparkles } from 'lucide-react';
-
 // Brand logos imported from assets (taken from Logo folder)
 import baseLogo from '../../assets/brands/Base.png';
 import bybitLogo from '../../assets/brands/Bybit.jpg';
@@ -14,116 +12,86 @@ import stellarLogo from '../../assets/brands/Stellar.jpg';
 
 interface BrandItem {
   name: string;
-  category: string;
   logo: string;
 }
 
 const BRANDS: BrandItem[] = [
-  { name: 'Base', category: 'Coinbase L2', logo: baseLogo },
-  { name: 'Bybit', category: 'Crypto Exchange', logo: bybitLogo },
-  { name: 'Cake Wallet', category: 'DeFi & Mobile', logo: cakeWalletLogo },
-  { name: 'Dabba Network', category: 'DePIN Connectivity', logo: dabbaLogo },
-  { name: 'Fhenix', category: 'Confidential FHE', logo: fhenixLogo },
-  { name: 'Huddle01', category: 'Decentralized Audio/Video', logo: huddleLogo },
-  { name: 'Sera Protocol', category: 'AI & Data Ecosystem', logo: seraLogo },
-  { name: 'Stellar', category: 'Global Financial Network', logo: stellarLogo },
+  { name: 'Base', logo: baseLogo },
+  { name: 'Bybit', logo: bybitLogo },
+  { name: 'Cake Wallet', logo: cakeWalletLogo },
+  { name: 'Dabba Network', logo: dabbaLogo },
+  { name: 'Fhenix', logo: fhenixLogo },
+  { name: 'Huddle01', logo: huddleLogo },
+  { name: 'Sera Protocol', logo: seraLogo },
+  { name: 'Stellar', logo: stellarLogo },
 ];
 
-// Tripled array for seamless infinite moving ticker
-const TICKER_ROW_1 = [...BRANDS, ...BRANDS, ...BRANDS];
-const TICKER_ROW_2 = [...BRANDS.slice(4), ...BRANDS.slice(0, 4), ...BRANDS, ...BRANDS];
+// 6 duplicated sets for mathematically seamless infinite marquee across all screen widths
+const TICKER_ITEMS = [
+  ...BRANDS,
+  ...BRANDS,
+  ...BRANDS,
+  ...BRANDS,
+  ...BRANDS,
+  ...BRANDS,
+];
 
 export const BrandLogoWall: React.FC = () => {
   return (
-    <section
-      id="brands"
-      className="w-full bg-white text-[#0C0C0C] pt-10 pb-24 sm:pb-28 md:pb-36 overflow-hidden relative z-0"
-    >
-      <div className="max-w-7xl mx-auto w-full px-5 sm:px-8 mb-12 sm:mb-16">
-        {/* Header with requested title */}
-        <div className="text-center max-w-3xl mx-auto">
-          <FadeIn delay={0} y={20}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-mono uppercase tracking-widest text-[#0C0C0C]/70 mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-              <span>Collaborations &amp; Partners</span>
-            </div>
-            <h2
-              className="text-[#0C0C0C] font-black uppercase tracking-tight leading-none text-center"
-              style={{ fontSize: 'clamp(2.4rem, 6vw, 5.2rem)' }}
-            >
-              Projects i&apos;ve worked with
+    <div id="brands" className="w-full bg-[#0C0C0C] select-none">
+      {/* 1. Pink Top Ribbon Banner (Matching reference image) */}
+      <div className="w-full bg-[#FFA0C5] text-[#0C0C0C] py-2.5 sm:py-3 px-4 flex items-center justify-center font-bold text-xs sm:text-sm md:text-base tracking-wide uppercase shadow-sm">
+        <span className="whitespace-nowrap text-center">
+          Your brand needs to tell a story &amp; i can make it happen
+        </span>
+      </div>
+
+      {/* 2. Brand Logos Section (Dark theme, single line, reduced size) */}
+      <section className="w-full bg-[#0C0C0C] pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden relative">
+        {/* Title in one line with pink tracked uppercase style */}
+        <FadeIn delay={0} y={15}>
+          <div className="w-full max-w-7xl mx-auto px-4 mb-8 sm:mb-12 flex items-center justify-center">
+            <h2 className="text-[#FFA0C5] font-bold uppercase tracking-[0.25em] sm:tracking-[0.32em] text-xs sm:text-sm md:text-base whitespace-nowrap text-center">
+              Projects I&apos;ve worked with
             </h2>
-            <p className="mt-4 text-xs sm:text-sm md:text-base text-[#0C0C0C]/65 max-w-xl mx-auto font-light leading-relaxed">
-              From decentralized networks and Web3 ecosystems to real-time communication protocols - here are some of the teams I’ve created for.
-            </p>
-          </FadeIn>
-        </div>
-      </div>
+          </div>
+        </FadeIn>
 
-      {/* Moving Brand Logo Ticker (Row 1: Moves Left) */}
-      <div className="w-full overflow-hidden py-3 border-t border-black/10">
-        <div className="flex w-max animate-marquee select-none items-center">
-          {TICKER_ROW_1.map((brand, i) => (
-            <div
-              key={`ticker-row1-${i}`}
-              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 group cursor-pointer"
-            >
-              {/* Logo Card */}
-              <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-26 md:h-26 rounded-2xl sm:rounded-3xl overflow-hidden border border-black/10 bg-zinc-50 p-3 sm:p-4 shadow-sm group-hover:shadow-xl group-hover:border-purple-500/50 group-hover:scale-108 transition-all duration-300 flex items-center justify-center">
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  loading="lazy"
-                  className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
-                />
+        {/* Single Line Moving Ticker with Gradient Edge Fades */}
+        <div className="relative w-full overflow-hidden py-2">
+          {/* Left edge gradient fade */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 md:w-48 bg-gradient-to-r from-[#0C0C0C] to-transparent z-10" />
+
+          {/* Right edge gradient fade */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 md:w-48 bg-gradient-to-l from-[#0C0C0C] to-transparent z-10" />
+
+          {/* Single Line Infinite Marquee Track */}
+          <div className="flex w-max animate-marquee select-none items-center">
+            {TICKER_ITEMS.map((brand, i) => (
+              <div
+                key={`brand-${brand.name}-${i}`}
+                className="flex flex-col items-center justify-center mx-3 sm:mx-5 md:mx-7 group cursor-pointer"
+              >
+                {/* Circular Brand Logo Badge */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white p-2.5 sm:p-3 border border-white/20 shadow-md flex items-center justify-center group-hover:scale-110 group-hover:border-[#FFA0C5] group-hover:shadow-[0_0_20px_rgba(255,160,197,0.35)] transition-all duration-300">
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    loading="lazy"
+                    className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Brand Name Below Logo */}
+                <span className="mt-2.5 sm:mt-3 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] sm:tracking-[0.2em] text-zinc-400 group-hover:text-white transition-colors text-center whitespace-nowrap">
+                  {brand.name}
+                </span>
               </div>
-
-              {/* Brand Name Below Logo */}
-              <span className="mt-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0C0C0C] group-hover:text-purple-600 transition-colors text-center whitespace-nowrap">
-                {brand.name}
-              </span>
-
-              {/* Category / Detail */}
-              <span className="text-[10px] sm:text-[11px] text-zinc-500 font-light tracking-wide text-center whitespace-nowrap">
-                {brand.category}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Moving Brand Logo Ticker (Row 2: Reverse Movement) */}
-      <div className="w-full overflow-hidden py-4 border-b border-black/10 mt-3">
-        <div className="flex w-max animate-marquee-reverse select-none items-center">
-          {TICKER_ROW_2.map((brand, i) => (
-            <div
-              key={`ticker-row2-${i}`}
-              className="flex flex-col items-center justify-center mx-4 sm:mx-6 md:mx-8 group cursor-pointer"
-            >
-              {/* Logo Card */}
-              <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-26 md:h-26 rounded-2xl sm:rounded-3xl overflow-hidden border border-black/10 bg-zinc-50 p-3 sm:p-4 shadow-sm group-hover:shadow-xl group-hover:border-pink-500/50 group-hover:scale-108 transition-all duration-300 flex items-center justify-center">
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  loading="lazy"
-                  className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-
-              {/* Brand Name Below Logo */}
-              <span className="mt-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0C0C0C] group-hover:text-pink-600 transition-colors text-center whitespace-nowrap">
-                {brand.name}
-              </span>
-
-              {/* Category / Detail */}
-              <span className="text-[10px] sm:text-[11px] text-zinc-500 font-light tracking-wide text-center whitespace-nowrap">
-                {brand.category}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
