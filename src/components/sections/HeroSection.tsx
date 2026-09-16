@@ -92,16 +92,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             inactiveTransition="transform 0.6s ease-in-out"
             className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[480px] flex items-end justify-center"
           >
-            <div className="absolute -inset-8 bg-gradient-to-t from-pink-600/25 via-purple-600/15 to-transparent blur-3xl rounded-full -z-10 pointer-events-none" />
-
-            <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
-              <img
-                src={jigyasaHero}
-                alt="Jigyasa - Content Creator & Storyteller"
-                draggable={false}
-                className="w-full h-auto max-h-[62vh] sm:max-h-[66vh] md:max-h-[72vh] object-contain object-bottom select-none filter drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)]"
-              />
-            </div>
+            <img
+              src={jigyasaHero}
+              alt="Jigyasa - Content Creator & Storyteller"
+              draggable={false}
+              className="w-full h-auto max-h-[62vh] sm:max-h-[66vh] md:max-h-[72vh] object-contain object-bottom select-none"
+            />
           </Magnet>
         </FadeIn>
       </div>
