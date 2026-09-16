@@ -59,7 +59,7 @@ export const SocialAnalyticsSection: React.FC = () => {
               Reach &amp; Community
             </h2>
             <p className="mt-4 text-sm sm:text-base md:text-lg text-zinc-400 font-light leading-relaxed">
-              I don&apos;t just post renders into the void — I build genuine hype. Here&apos;s a quick snapshot of the audience tuning in across my channels.
+              I don&apos;t just post renders into the void - I build genuine hype. Here&apos;s a quick snapshot of the audience tuning in across my channels.
             </p>
           </FadeIn>
         </div>

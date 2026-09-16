@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600">
         <p>© {new Date().getFullYear()} Jigyasa. Crafted with love &amp; 3D passion.</p>
-        <p className="mt-2 sm:mt-0 font-mono text-zinc-500">Jigyasa — 3D Creator</p>
+        <p className="mt-2 sm:mt-0 font-mono text-zinc-500">Jigyasa - 3D Creator</p>
       </div>
     </footer>
   );

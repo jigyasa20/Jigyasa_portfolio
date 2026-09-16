@@ -18,7 +18,6 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
       if (!sectionRef.current) return;
       const rect = sectionRef.current.getBoundingClientRect();
       const sectionTop = window.scrollY + rect.top;
-      // Smooth scroll-driven horizontal parallax
       const calculatedOffset = (window.scrollY - sectionTop + window.innerHeight) * 0.25;
       setOffset(calculatedOffset);
       ticking = false;
@@ -41,7 +40,6 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
     };
   }, []);
 
-  // Split into 2 rows and triple for seamless infinite looping
   const row1 = SOCIAL_VIDEOS.slice(0, 4);
   const row2 = SOCIAL_VIDEOS.slice(4, 8);
 
@@ -58,22 +56,22 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
       className="w-full bg-[#0C0C0C] pt-20 sm:pt-28 md:pt-36 pb-12 overflow-hidden select-none"
     >
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-8 sm:mb-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-        <FadeIn delay={0} y={20}>
+      <div className="max-w-7xl mx-auto px-6 mb-8 sm:mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <FadeIn delay={0} y={20} className="max-w-2xl">
           <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#D7E2EA]/60 font-mono mb-2">
             <Sparkles className="w-3.5 h-3.5 text-pink-400" />
             <span>Click Any Video To Watch</span>
           </div>
           <h2
             className="hero-heading font-black uppercase tracking-tight leading-none"
-            style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)' }}
+            style={{ fontSize: 'clamp(2.2rem, 5vw, 4.4rem)' }}
           >
-            Social Reels &amp; Motion
+            Content That Gets Noticed
           </h2>
         </FadeIn>
-        <FadeIn delay={0.15} y={20}>
-          <p className="text-xs sm:text-sm text-zinc-400 max-w-sm font-light uppercase tracking-wider">
-            Curated 3D animations, viral Reels, and motion experiments from my social channels.
+        <FadeIn delay={0.15} y={20} className="max-w-md">
+          <p className="text-xs sm:text-sm text-zinc-300 font-light uppercase tracking-wider leading-relaxed">
+            WEB3 Content, Brand/Founder&apos;s Stories, Event Coverage, Travel and Social Campaigns built to get people talking
           </p>
         </FadeIn>
       </div>
@@ -118,7 +116,7 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
                 )}
               </div>
 
-              {/* Center Play Button (glows on hover) */}
+              {/* Center Play Button */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                 <div className="w-13 h-13 sm:w-15 sm:h-15 rounded-full bg-white/10 backdrop-blur-md border border-white/30 text-white flex items-center justify-center transition-all duration-300 group-hover:scale-115 group-hover:bg-fuchsia-600 group-hover:border-white shadow-2xl">
                   <Play className="w-6 h-6 ml-0.5 fill-current" />

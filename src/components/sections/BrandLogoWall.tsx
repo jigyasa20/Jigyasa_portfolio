@@ -46,7 +46,7 @@ export const BrandLogoWall: React.FC = () => {
               Teams I&apos;ve Created For
             </h2>
             <p className="mt-3 text-xs sm:text-sm md:text-base text-[#0C0C0C]/65 max-w-xl mx-auto font-light leading-relaxed">
-              From global athletic brands and gaming powerhouses to decentralized protocols — here are some teams I’ve had the fun of creating with.
+              From global athletic brands and gaming powerhouses to decentralized protocols - here are some teams I’ve had the fun of creating with.
             </p>
           </FadeIn>
         </div>

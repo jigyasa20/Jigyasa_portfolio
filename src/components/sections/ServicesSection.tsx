@@ -56,7 +56,7 @@ export const ServicesSection: React.FC = () => {
             Services
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-4 max-w-lg mx-auto font-light">
-            How I can help bring your visual universe to life — from quick social assets to full creative direction.
+            How I can help bring your visual universe to life - from quick social assets to full creative direction.
           </p>
         </FadeIn>
 

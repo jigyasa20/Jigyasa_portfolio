@@ -14,7 +14,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const emailAddress = 'jigyasa@creator.design';
+  const emailAddress = 'jigyasa.eth@gmail.com';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -74,8 +74,8 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
                 Let&apos;s Make Something Cool
               </h3>
-              <p className="text-sm sm:text-base text-zinc-400 font-light mt-1">
-                Got a project brewing, a brand that needs a 3D glow-up, or just want to jam on ideas? Hit me up — I reply fast.
+              <p className="text-sm sm:text-base text-zinc-300 font-light mt-2 leading-relaxed">
+                Got a project, campaign, event or wild idea? Tell me what you&apos;re working on. I’ll bring the ideas, the content and probably a little chaos. Hit me up - I reply fast.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-medium text-white transition-colors shrink-0"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-xs font-medium text-white transition-colors shrink-0 cursor-pointer"
               >
                 {copied ? (
                   <>
@@ -156,13 +156,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Drop some details about your vision, timeline, or just say hi..."
+                    placeholder="Tell me about your project, campaign, or event..."
                     className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-purple-500 focus:outline-none text-white text-sm placeholder-zinc-600 resize-none transition-colors"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-full text-white font-medium uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.99] transition-all"
+                  className="w-full py-3.5 rounded-full text-white font-medium uppercase tracking-widest text-sm flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.99] transition-all cursor-pointer"
                   style={{
                     background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
                     boxShadow: '0px 4px 4px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721B1',
