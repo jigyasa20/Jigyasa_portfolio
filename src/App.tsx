@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import HeroSection from './components/sections/HeroSection';
 import SocialVideosSection from './components/sections/SocialVideosSection';
-import SocialAnalyticsSection from './components/sections/SocialAnalyticsSection';
 import AboutSection from './components/sections/AboutSection';
 import BrandLogoWall from './components/sections/BrandLogoWall';
 import ContactModal from './components/ContactModal';
@@ -37,10 +36,7 @@ export function App() {
       {/* 3. Brand Logo Wall ("Projects I've worked with" - single line ticker) */}
       <BrandLogoWall />
 
-      {/* 4. Social Media Analytics (Views, followers, brand collabs & platform stats) */}
-      <SocialAnalyticsSection />
-
-      {/* 5. About Section (Natural, conversational storytelling) */}
+      {/* 4. About Section (Natural, conversational storytelling) */}
       <AboutSection onOpenContact={handleOpenContact} />
 
       {/* Footer */}
