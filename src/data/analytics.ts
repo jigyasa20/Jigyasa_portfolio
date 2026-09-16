@@ -1,81 +1,99 @@
-export interface PlatformStat {
-  platform: 'Instagram' | 'Twitter / X' | 'TikTok' | 'YouTube';
+export interface DetailedPlatformStat {
+  platform: 'YouTube' | 'Instagram' | 'Twitter / X';
+  platformNumber: string;
   handle: string;
   followers: string;
-  primaryMetricLabel: string;
-  primaryMetricValue: string;
-  secondaryMetricLabel: string;
-  secondaryMetricValue: string;
-  vibe: string;
+  followersLabel: string;
+  views: string;
+  viewsLabel: string;
+  reach: string;
+  reachLabel: string;
+  engagement: string;
+  engagementLabel: string;
+  contentFocus: string;
+  themeColor: string;
+  pillColor: string;
+  borderColor: string;
+  glowColor: string;
   url: string;
-  color: string;
 }
 
-export interface SocialAnalyticsData {
+export interface SocialReachData {
   overview: {
-    totalViews: string;
-    totalFollowers: string;
-    brandsCollabed: string;
-    engagementRate: string;
+    totalViewsAndImpressions: string;
+    totalCommunity: string;
+    totalReachAndViewers: string;
+    avgEngagement: string;
+    breakdownNote: string;
   };
-  platforms: PlatformStat[];
+  platforms: DetailedPlatformStat[];
 }
 
-export const SOCIAL_ANALYTICS: SocialAnalyticsData = {
+export const SOCIAL_ANALYTICS: SocialReachData = {
   overview: {
-    totalViews: '18.5M+',
-    totalFollowers: '495K+',
-    brandsCollabed: '35+',
-    engagementRate: '8.6%',
+    totalViewsAndImpressions: '5.2M+',
+    totalCommunity: '7.8K',
+    totalReachAndViewers: '3.8M+',
+    avgEngagement: '5.7%',
+    breakdownNote: '4.23M YouTube + 554.5K Instagram + 421.7K Twitter/X',
   },
   platforms: [
     {
+      platform: 'YouTube',
+      platformNumber: 'platform (01)',
+      handle: '@Jigyasa3D',
+      followers: '3.8K',
+      followersLabel: 'Subscribers',
+      views: '4.23M',
+      viewsLabel: 'Total Views',
+      reach: '3.1M+',
+      reachLabel: 'Unique Viewers',
+      engagement: '6.4%',
+      engagementLabel: 'Avg. Retention & Engagement',
+      contentFocus: 'Full CGI breakdowns, lighting masterclasses, and viral motion graphics.',
+      themeColor: 'text-red-400',
+      pillColor: 'bg-red-500/15 text-red-300 border-red-500/30',
+      borderColor: 'border-red-500/20 hover:border-red-500/50',
+      glowColor: 'from-red-500/10 via-orange-500/5 to-transparent',
+      url: 'https://youtube.com',
+    },
+    {
       platform: 'Instagram',
+      platformNumber: 'platform (02)',
       handle: '@jigyasa.3d',
-      followers: '210K',
-      primaryMetricLabel: 'Reel Views',
-      primaryMetricValue: '11.2M',
-      secondaryMetricLabel: 'Avg. Reel Reach',
-      secondaryMetricValue: '185K',
-      vibe: 'Daily 3D aesthetic drops, viral motion loops & behind-the-scenes.',
+      followers: '2.3K',
+      followersLabel: 'Followers',
+      views: '554.5K',
+      viewsLabel: 'Reels & Video Views',
+      reach: '381.8K',
+      reachLabel: 'Unique Viewers',
+      engagement: '5.8%',
+      engagementLabel: 'Avg. Engagement Rate',
+      contentFocus: 'Aesthetic 3D loops, founder stories, and high-energy visual campaigns.',
+      themeColor: 'text-pink-400',
+      pillColor: 'bg-pink-500/15 text-pink-300 border-pink-500/30',
+      borderColor: 'border-pink-500/20 hover:border-pink-500/50',
+      glowColor: 'from-pink-500/10 via-purple-500/5 to-transparent',
       url: 'https://instagram.com',
-      color: 'from-pink-500/20 via-purple-500/10 to-transparent',
     },
     {
       platform: 'Twitter / X',
+      platformNumber: 'platform (03)',
       handle: '@jigyasa_3d',
-      followers: '115K',
-      primaryMetricLabel: 'Monthly Impressions',
-      primaryMetricValue: '4.8M',
-      secondaryMetricLabel: 'Community Retweets',
-      secondaryMetricValue: '34K',
-      vibe: 'Real-time creative thoughts, Web3 discussions & high-res render teasers.',
+      followers: '1.7K',
+      followersLabel: 'Followers',
+      views: '421.7K',
+      viewsLabel: 'Total Impressions',
+      reach: '295K+',
+      reachLabel: 'Organic Viewers',
+      engagement: '4.9%',
+      engagementLabel: 'Avg. Engagement Rate',
+      contentFocus: 'Real-time Web3 thought leadership, design threads, and high-res render previews.',
+      themeColor: 'text-sky-400',
+      pillColor: 'bg-sky-500/15 text-sky-300 border-sky-500/30',
+      borderColor: 'border-sky-500/20 hover:border-sky-500/50',
+      glowColor: 'from-sky-500/10 via-cyan-500/5 to-transparent',
       url: 'https://x.com',
-      color: 'from-blue-500/20 via-cyan-500/10 to-transparent',
-    },
-    {
-      platform: 'TikTok',
-      handle: '@jigyasa.creates',
-      followers: '125K',
-      primaryMetricLabel: 'Total Likes',
-      primaryMetricValue: '2.4M',
-      secondaryMetricLabel: 'Viral Video Ratio',
-      secondaryMetricValue: '28%',
-      vibe: 'Fast, punchy 3D tutorials and viral CGI audio edits.',
-      url: 'https://tiktok.com',
-      color: 'from-emerald-500/20 via-teal-500/10 to-transparent',
-    },
-    {
-      platform: 'YouTube',
-      handle: 'Jigyasa 3D',
-      followers: '45K',
-      primaryMetricLabel: 'Watch Hours',
-      primaryMetricValue: '320K',
-      secondaryMetricLabel: 'Average Retention',
-      secondaryMetricValue: '72%',
-      vibe: 'Full breakdown sessions, lighting masterclasses & project timelapses.',
-      url: 'https://youtube.com',
-      color: 'from-red-500/20 via-orange-500/10 to-transparent',
     },
   ],
 };
