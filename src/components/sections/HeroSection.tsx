@@ -48,7 +48,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             onClick={(e) => handleNavClick(e, 'brands')}
             className="transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
-            Projects
+            Brands
           </a>
           <a
             href="#stats"

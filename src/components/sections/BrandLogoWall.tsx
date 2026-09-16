@@ -53,7 +53,7 @@ export const BrandLogoWall: React.FC = () => {
         <FadeIn delay={0} y={15}>
           <div className="w-full max-w-7xl mx-auto px-4 mb-8 sm:mb-12 flex items-center justify-center">
             <h2 className="text-[#FFA0C5] font-bold uppercase tracking-[0.25em] sm:tracking-[0.32em] text-xs sm:text-sm md:text-base whitespace-nowrap text-center">
-              Projects I&apos;ve worked with
+              Brands I have worked with
             </h2>
           </div>
         </FadeIn>
