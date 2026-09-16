@@ -89,7 +89,7 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = () => {
 
         {/* Top Badges: Platform + Duration */}
         <div className="absolute top-3.5 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-          <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-[11px] font-mono tracking-wider uppercase text-white flex items-center gap-1.5 shadow-sm">
+          <span className="px-3 py-1 rounded-full bg-black/75 backdrop-blur-md border border-white/15 text-[11px] font-medium tracking-wider uppercase text-white flex items-center gap-1.5 shadow-sm">
             {isX ? (
               <svg className="w-3 h-3 text-sky-400 fill-current" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
