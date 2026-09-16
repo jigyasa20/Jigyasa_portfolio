@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           </span>
           <span className="hidden sm:inline text-zinc-600">/</span>
           <span className="text-xs sm:text-sm uppercase tracking-widest text-[#D7E2EA]/60 font-light">
-            3D Creator &amp; Visual Storyteller
+            Content, Growth &amp; Brand Storyteller
           </span>
         </div>
 
@@ -73,8 +73,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600">
-        <p>© {new Date().getFullYear()} Jigyasa. Crafted with love &amp; 3D passion.</p>
-        <p className="mt-2 sm:mt-0 font-mono text-zinc-500">Jigyasa - 3D Creator</p>
+        <p>© {new Date().getFullYear()} Jigyasa. Crafted with passion for stories &amp; community.</p>
+        <p className="mt-2 sm:mt-0 font-mono text-zinc-500">Jigyasa - Content &amp; Growth</p>
       </div>
     </footer>
   );

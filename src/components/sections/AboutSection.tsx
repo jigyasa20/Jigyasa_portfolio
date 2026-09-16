@@ -64,20 +64,25 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                 </div>
 
                 {/* "Hello! my name is Jigyasa" Sticker Badge */}
-                <div className="absolute -bottom-6 -right-3 sm:-right-6 z-20 w-[190px] sm:w-[220px] rounded-2xl overflow-hidden shadow-2xl border-2 border-[#3A1F13] transform rotate-3 hover:rotate-1 transition-transform">
-                  {/* Top Cocoa Brown Bar */}
-                  <div className="bg-[#3A1F13] text-white py-2 px-3 text-center">
-                    <span className="block font-black text-lg sm:text-xl tracking-wider uppercase leading-tight font-sans">
+                <div className="absolute -bottom-6 -right-3 sm:-right-6 z-20 w-[190px] sm:w-[220px] rounded-2xl overflow-hidden shadow-[0_15px_35px_rgba(182,0,168,0.35)] border border-pink-500/40 transform rotate-3 hover:rotate-1 transition-transform bg-[#0C0C0C]">
+                  {/* Top Bar with site's signature gradient */}
+                  <div
+                    className="text-white py-2 px-3 text-center"
+                    style={{
+                      background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
+                    }}
+                  >
+                    <span className="block font-black text-lg sm:text-xl tracking-wider uppercase leading-tight font-sans text-white">
                       Hello!
                     </span>
-                    <span className="block text-[10px] sm:text-[11px] text-zinc-300 font-mono tracking-wider lowercase">
+                    <span className="block text-[10px] sm:text-[11px] text-pink-100 font-mono tracking-wider lowercase">
                       my name is
                     </span>
                   </div>
-                  {/* Bottom White Area with Cursive Script */}
-                  <div className="bg-[#FFFDF9] py-2.5 px-4 text-center">
+                  {/* Bottom Dark Luxury Card Area with Shimmering Name */}
+                  <div className="bg-[#121216] py-2.5 px-4 text-center border-t border-white/10">
                     <span
-                      className="text-[#2B140B] font-serif italic text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight block"
+                      className="font-serif italic text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight block text-white"
                       style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}
                     >
                       Jigyasa
@@ -85,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                   </div>
                 </div>
 
-                {/* Floating 3D Metallic Silver Stars */}
+                {/* Floating Metallic Silver Stars */}
                 <div className="absolute -top-3 -left-3 text-2xl text-zinc-200 filter drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] pointer-events-none animate-pulse">
                   ✦
                 </div>
@@ -105,7 +110,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
               {/* Eyebrow badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono uppercase tracking-widest text-[#FFA0C5] mb-5 self-start">
                 <Sparkles className="w-3.5 h-3.5 text-[#FFA0C5]" />
-                <span>Creative Director &amp; Storyteller</span>
+                <span>Content, Growth &amp; Storytelling</span>
               </div>
 
               {/* Bold Hook Quote (written above the bio) */}

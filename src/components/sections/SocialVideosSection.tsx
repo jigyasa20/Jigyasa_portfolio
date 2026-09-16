@@ -87,7 +87,7 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
             <div
               key={`row1-vid-${idx}`}
               onClick={() => onSelectVideo(video)}
-              className="group relative w-[320px] sm:w-[400px] md:w-[440px] h-[220px] sm:h-[260px] rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/80 cursor-pointer shadow-xl transition-all duration-500 hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(182,0,168,0.25)] hover:scale-[1.02]"
+              className="group relative w-[320px] sm:w-[380px] md:w-[420px] aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/80 cursor-pointer shadow-xl transition-all duration-500 hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(182,0,168,0.25)] hover:scale-[1.02]"
             >
               {/* Thumbnail */}
               <img
@@ -156,7 +156,7 @@ export const SocialVideosSection: React.FC<SocialVideosSectionProps> = ({ onSele
             <div
               key={`row2-vid-${idx}`}
               onClick={() => onSelectVideo(video)}
-              className="group relative w-[320px] sm:w-[400px] md:w-[440px] h-[220px] sm:h-[260px] rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/80 cursor-pointer shadow-xl transition-all duration-500 hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(182,0,168,0.25)] hover:scale-[1.02]"
+              className="group relative w-[320px] sm:w-[380px] md:w-[420px] aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800/80 cursor-pointer shadow-xl transition-all duration-500 hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(182,0,168,0.25)] hover:scale-[1.02]"
             >
               {/* Thumbnail */}
               <img

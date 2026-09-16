@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
               <img
                 src={jigyasaHero}
-                alt="Jigyasa - 3D Creator"
+                alt="Jigyasa - Content Creator & Storyteller"
                 draggable={false}
                 className="w-full h-auto max-h-[62vh] sm:max-h-[66vh] md:max-h-[72vh] object-contain object-bottom select-none filter drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)]"
               />
@@ -115,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               fontSize: 'clamp(0.75rem, 1.25vw, 1.3rem)',
             }}
           >
-            3d creator obsessed with turning wild ideas into visuals you can&apos;t stop staring at.
+            Video creator &amp; growth strategist turning wild ideas and real stories into content that stops the scroll.
           </p>
         </FadeIn>
 
