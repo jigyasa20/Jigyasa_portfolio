@@ -1,7 +1,7 @@
 import React from 'react';
 import FadeIn from '../FadeIn';
 import ContactButton from '../ContactButton';
-import jigyasaPhoto from '../../assets/jigyasa_photo.png';
+import jigyasaPhoto from '../../assets/about_me.jpg';
 import { Sparkles } from 'lucide-react';
 
 interface AboutSectionProps {
