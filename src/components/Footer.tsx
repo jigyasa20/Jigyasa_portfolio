@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         {/* Center: Social Links */}
         <div className="flex items-center gap-6 text-xs uppercase tracking-widest text-[#D7E2EA]/70">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/jigyasa_vaishnv_"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             Instagram
           </a>
           <a
-            href="https://x.com"
+            href="https://x.com/jigyasa_0203"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
@@ -43,12 +43,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             Twitter / X
           </a>
           <a
-            href="https://tiktok.com"
+            href="https://www.youtube.com/@StoriesbyRaahi"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
           >
-            TikTok
+            YouTube
           </a>
           <button
             type="button"

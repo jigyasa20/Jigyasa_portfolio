@@ -184,16 +184,20 @@ export const SocialAnalyticsSection: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Platform pill badge (01, 02, 03 - inspired by reference) */}
-                    <span
-                      className={`text-[11px] font-mono px-3 py-1 rounded-full border ${platform.pillColor} font-semibold uppercase tracking-wider`}
+                    {/* Visit Link Pill Option with user's real URL */}
+                    <a
+                      href={platform.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-1.5 rounded-full border ${platform.pillColor} hover:scale-105 transition-all duration-200 shadow-sm cursor-pointer`}
                     >
-                      {platform.platformNumber}
-                    </span>
+                      <span>Visit</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
                   </div>
 
-                  {/* Big Followers Hero Box (Inspired by reference Image 3) */}
-                  <div className="mb-6 p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/60 text-center">
+                  {/* Big Followers Hero Box */}
+                  <div className="mb-4 p-4 rounded-2xl bg-zinc-950/60 border border-zinc-800/60 text-center">
                     <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">
                       {platform.followers}
                     </span>
@@ -202,56 +206,17 @@ export const SocialAnalyticsSection: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* 3 Core Metrics Rows */}
-                  <div className="space-y-3 pt-2">
-                    {/* Views / Impressions */}
-                    <div className="flex items-center justify-between py-2 border-b border-zinc-800/60 text-xs">
-                      <span className="text-zinc-400 uppercase tracking-wider">
+                  {/* Views / Impressions Metric */}
+                  <div className="pt-1">
+                    <div className="flex items-center justify-between py-3 px-4 rounded-2xl bg-zinc-950/50 border border-zinc-800/60 text-xs">
+                      <span className="text-zinc-400 uppercase tracking-wider font-mono">
                         {platform.viewsLabel}
                       </span>
-                      <span className="text-base font-bold text-white font-mono">
+                      <span className="text-base sm:text-lg font-bold text-white font-mono">
                         {platform.views}
                       </span>
                     </div>
-
-                    {/* Reach / Viewers */}
-                    <div className="flex items-center justify-between py-2 border-b border-zinc-800/60 text-xs">
-                      <span className="text-zinc-400 uppercase tracking-wider">
-                        {platform.reachLabel}
-                      </span>
-                      <span className="text-base font-bold text-white font-mono">
-                        {platform.reach}
-                      </span>
-                    </div>
-
-                    {/* Engagement */}
-                    <div className="flex items-center justify-between py-2 border-b border-zinc-800/60 text-xs">
-                      <span className="text-zinc-400 uppercase tracking-wider">
-                        {platform.engagementLabel}
-                      </span>
-                      <span className="text-base font-bold text-emerald-400 font-mono">
-                        {platform.engagement}
-                      </span>
-                    </div>
                   </div>
-
-                  {/* Content Focus Note */}
-                  <p className="mt-5 text-xs text-zinc-400 font-light leading-relaxed">
-                    {platform.contentFocus}
-                  </p>
-                </div>
-
-                {/* Direct Link Button */}
-                <div className="mt-6 pt-4 border-t border-zinc-800/80 relative z-10">
-                  <a
-                    href={platform.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-zinc-800/80 hover:bg-zinc-700 text-xs font-semibold uppercase tracking-wider text-zinc-200 hover:text-white transition-all duration-200 group-hover:border-zinc-600 border border-transparent"
-                  >
-                    <span>View {platform.platform}</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
                 </div>
               </div>
             </FadeIn>
