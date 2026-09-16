@@ -11,8 +11,11 @@ export default {
         accent: "#D7E2EA",
       },
       fontFamily: {
-        sans: ["'Kanit'", "sans-serif"],
-        kanit: ["'Kanit'", "sans-serif"],
+        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+        heading: ["'Syne'", "'Plus Jakarta Sans'", "sans-serif"],
+        syne: ["'Syne'", "sans-serif"],
+        mono: ["'JetBrains Mono'", "monospace"],
+        kanit: ["'Plus Jakarta Sans'", "sans-serif"],
       },
     },
   },

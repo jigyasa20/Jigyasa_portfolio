@@ -72,7 +72,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
                       background: 'linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%)',
                     }}
                   >
-                    <span className="block font-black text-lg sm:text-xl tracking-wider uppercase leading-tight font-sans text-white">
+                    <span className="block font-black text-lg sm:text-xl tracking-wider uppercase leading-tight font-heading text-white">
                       Hello!
                     </span>
                     <span className="block text-[10px] sm:text-[11px] text-pink-100 font-mono tracking-wider lowercase">
@@ -114,7 +114,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
               </div>
 
               {/* Bold Hook Quote (written above the bio) */}
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black text-white tracking-tight leading-[1.25] mb-6 sm:mb-8 font-sans">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-black text-white tracking-tight leading-[1.25] mb-6 sm:mb-8 font-heading">
                 &ldquo;I&apos;m the person you call when your project needs more than another pretty post on the timeline.&rdquo;
               </h3>
 
