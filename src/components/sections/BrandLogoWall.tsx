@@ -13,17 +13,18 @@ import stellarLogo from '../../assets/brands/Stellar.jpg';
 interface BrandItem {
   name: string;
   logo: string;
+  bgColor: string;
 }
 
 const BRANDS: BrandItem[] = [
-  { name: 'Base', logo: baseLogo },
-  { name: 'Bybit', logo: bybitLogo },
-  { name: 'Cake Wallet', logo: cakeWalletLogo },
-  { name: 'Dabba Network', logo: dabbaLogo },
-  { name: 'Fhenix', logo: fhenixLogo },
-  { name: 'Huddle01', logo: huddleLogo },
-  { name: 'Sera Protocol', logo: seraLogo },
-  { name: 'Stellar', logo: stellarLogo },
+  { name: 'Base', logo: baseLogo, bgColor: '#FFFFFF' },
+  { name: 'Bybit', logo: bybitLogo, bgColor: '#111727' },
+  { name: 'Cake Wallet', logo: cakeWalletLogo, bgColor: '#EFEFF7' },
+  { name: 'Dabba Network', logo: dabbaLogo, bgColor: '#1A1A1A' },
+  { name: 'Fhenix', logo: fhenixLogo, bgColor: '#FFFFFF' },
+  { name: 'Huddle01', logo: huddleLogo, bgColor: '#000000' },
+  { name: 'Sera Protocol', logo: seraLogo, bgColor: '#FFFFFF' },
+  { name: 'Stellar', logo: stellarLogo, bgColor: '#FFFFFF' },
 ];
 
 // 6 duplicated sets for mathematically seamless infinite marquee across all screen widths
@@ -72,13 +73,17 @@ export const BrandLogoWall: React.FC = () => {
                 key={`brand-${brand.name}-${i}`}
                 className="flex flex-col items-center justify-center mx-3 sm:mx-5 md:mx-7 group cursor-pointer"
               >
-                {/* Circular Brand Logo Badge */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-white p-2.5 sm:p-3 border border-white/20 shadow-md flex items-center justify-center group-hover:scale-110 group-hover:border-[#FFA0C5] group-hover:shadow-[0_0_20px_rgba(255,160,197,0.35)] transition-all duration-300">
+                {/* Circular Brand Logo Badge with matching background color to eliminate squares */}
+                <div
+                  className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden p-2 sm:p-2.5 border border-white/20 shadow-md flex items-center justify-center group-hover:scale-110 group-hover:border-[#FFA0C5] group-hover:shadow-[0_0_20px_rgba(255,160,197,0.35)] transition-all duration-300"
+                  style={{ backgroundColor: brand.bgColor }}
+                >
                   <img
                     src={brand.logo}
                     alt={brand.name}
                     loading="lazy"
-                    className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain filter contrast-[1.02] group-hover:scale-105 transition-transform duration-300 rounded-full"
+                    style={{ backgroundColor: brand.bgColor }}
                   />
                 </div>
 
