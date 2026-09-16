@@ -10,33 +10,33 @@ interface ServiceItem {
 const SERVICES_DATA: ServiceItem[] = [
   {
     id: '01',
-    name: '3D Modeling',
+    name: '3D Modeling & Characters',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'From expressive digital characters and futuristic fashion wear to detailed environments. If you can imagine it, I can build it in 3D.',
   },
   {
     id: '02',
-    name: 'Rendering',
+    name: 'Lighting & Photoreal Renders',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'Cranking up the realism with custom shaders, tactile materials, and ray-traced lighting that makes your product look tangible and expensive.',
   },
   {
     id: '03',
-    name: 'Motion Design',
+    name: 'Motion Design & Social Loops',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'Hypnotic 3D loops, kinetic typography, and physics simulations specifically crafted to stop people mid-scroll and spark organic shares.',
   },
   {
     id: '04',
-    name: 'Branding',
+    name: 'Brand Worlds & 3D Identity',
     description:
-      'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.',
+      'Logos that actually move, custom spatial brand kits, and visual identities that give your project an unforgettable futuristic flex.',
   },
   {
     id: '05',
-    name: 'Web Design',
+    name: 'Creative Web & Spatial Design',
     description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'Buttery-smooth websites and interactive portfolio experiences built around strong typography, 3D assets, and zero fluff.',
   },
 ];
 
@@ -55,6 +55,9 @@ export const ServicesSection: React.FC = () => {
           >
             Services
           </h2>
+          <p className="text-xs sm:text-sm md:text-base text-zinc-600 mt-4 max-w-lg mx-auto font-light">
+            How I can help bring your visual universe to life — from quick social assets to full creative direction.
+          </p>
         </FadeIn>
 
         {/* 5 Service items in vertical list */}

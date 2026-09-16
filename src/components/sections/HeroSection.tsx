@@ -8,8 +8,8 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
-  // Use Jigyasa's photo from Logo folder
-  const portraitUrl = '/jigyasa.png';
+  // Transparent cutout without background
+  const portraitUrl = '/jigyasa_transparent.png';
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -46,6 +46,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             Services
           </a>
           <a
+            href="#stats"
+            onClick={(e) => handleNavClick(e, 'stats')}
+            className="transition-opacity duration-200 hover:opacity-70 cursor-pointer"
+          >
+            Impact
+          </a>
+          <a
             href="#projects"
             onClick={(e) => handleNavClick(e, 'projects')}
             className="transition-opacity duration-200 hover:opacity-70 cursor-pointer"
@@ -62,13 +69,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </nav>
       </FadeIn>
 
-      {/* 2. Hero Heading - resized to fit completely without any cutoff */}
-      <div className="w-full flex justify-center text-center z-10 pointer-events-none px-2 sm:px-6">
+      {/* 2. Hero Heading - Perfectly fitted and fully visible without any cutoff */}
+      <div className="w-full flex justify-center text-center z-10 pointer-events-none px-4 sm:px-6">
         <FadeIn delay={0.15} y={30} duration={0.9} className="w-full max-w-[100vw]">
           <h1
             className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center select-none mt-4 sm:mt-6 md:mt-8"
             style={{
-              fontSize: 'clamp(2.5rem, 9.4vw, 9.8rem)',
+              fontSize: 'clamp(2.4rem, 9.2vw, 9.6rem)',
               letterSpacing: '-0.02em',
             }}
           >
@@ -77,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
         </FadeIn>
       </div>
 
-      {/* 3. Hero Portrait (Jigyasa's Photo with Magnetic Effect) */}
+      {/* 3. Hero Portrait (Transparent Cutout Image with Magnetic Effect) */}
       <div className="absolute left-1/2 -translate-x-1/2 bottom-0 z-20 pointer-events-auto">
         <FadeIn delay={0.5} y={30} duration={0.9}>
           <Magnet
@@ -87,15 +94,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
             inactiveTransition="transform 0.6s ease-in-out"
             className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[470px] flex items-end justify-center"
           >
-            {/* Subtle glow behind portrait */}
-            <div className="absolute -inset-4 bg-gradient-to-t from-pink-500/15 via-purple-600/10 to-transparent blur-3xl rounded-full -z-10 pointer-events-none" />
+            {/* Subtle atmospheric ambient glow behind portrait */}
+            <div className="absolute -inset-6 bg-gradient-to-t from-fuchsia-600/20 via-purple-600/15 to-transparent blur-3xl rounded-full -z-10 pointer-events-none" />
 
-            <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_82%,transparent_100%)]">
+            <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
               <img
                 src={portraitUrl}
                 alt="Jigyasa - 3D Creator"
                 draggable={false}
-                className="w-full h-auto max-h-[62vh] sm:max-h-[66vh] md:max-h-[70vh] object-contain object-bottom select-none filter contrast-[1.03] drop-shadow-[0_20px_40px_rgba(0,0,0,0.9)]"
+                className="w-full h-auto max-h-[62vh] sm:max-h-[66vh] md:max-h-[70vh] object-contain object-bottom select-none filter contrast-[1.02] drop-shadow-[0_20px_45px_rgba(0,0,0,0.85)]"
               />
             </div>
           </Magnet>
@@ -104,15 +111,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
 
       {/* 4. Bottom Bar */}
       <div className="w-full flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-12 mt-auto z-30">
-        {/* Left paragraph */}
+        {/* Left casual paragraph */}
         <FadeIn delay={0.35} y={20} duration={0.8}>
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[270px]"
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[170px] sm:max-w-[220px] md:max-w-[280px]"
             style={{
-              fontSize: 'clamp(0.75rem, 1.3vw, 1.35rem)',
+              fontSize: 'clamp(0.75rem, 1.25vw, 1.3rem)',
             }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            3d creator obsessed with turning wild ideas into visuals you can&apos;t stop staring at.
           </p>
         </FadeIn>
 

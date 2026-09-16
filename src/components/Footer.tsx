@@ -20,20 +20,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           </span>
           <span className="hidden sm:inline text-zinc-600">/</span>
           <span className="text-xs sm:text-sm uppercase tracking-widest text-[#D7E2EA]/60 font-light">
-            3D Creator & Visual Designer
+            3D Creator &amp; Visual Storyteller
           </span>
         </div>
 
         {/* Center: Social Links */}
         <div className="flex items-center gap-6 text-xs uppercase tracking-widest text-[#D7E2EA]/70">
-          <a
-            href="https://x.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
-          >
-            Twitter
-          </a>
           <a
             href="https://instagram.com"
             target="_blank"
@@ -43,19 +35,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
             Instagram
           </a>
           <a
-            href="https://artstation.com"
+            href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
           >
-            ArtStation
+            Twitter / X
+          </a>
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            TikTok
           </a>
           <button
             type="button"
             onClick={onOpenContact}
             className="hover:text-white transition-colors cursor-pointer"
           >
-            Contact
+            Say Hello
           </button>
         </div>
 
@@ -73,8 +73,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600">
-        <p>© {new Date().getFullYear()} Jigyasa. All rights reserved.</p>
-        <p className="mt-2 sm:mt-0 font-mono">Jack -- 3D Creator</p>
+        <p>© {new Date().getFullYear()} Jigyasa. Crafted with love &amp; 3D passion.</p>
+        <p className="mt-2 sm:mt-0 font-mono text-zinc-500">Jigyasa — 3D Creator</p>
       </div>
     </footer>
   );

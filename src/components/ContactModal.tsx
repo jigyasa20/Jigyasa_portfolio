@@ -69,13 +69,13 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-xs uppercase tracking-widest text-[#D7E2EA] mb-3">
                 <Sparkles className="w-3.5 h-3.5 text-pink-400" />
-                <span>Get In Touch</span>
+                <span>Say Hello</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
-                Let&apos;s Build Together
+                Let&apos;s Make Something Cool
               </h3>
               <p className="text-sm sm:text-base text-zinc-400 font-light mt-1">
-                Have a 3D project, brand vision, or creative idea? Reach out directly.
+                Got a project brewing, a brand that needs a 3D glow-up, or just want to jam on ideas? Hit me up — I reply fast.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 {copied ? (
                   <>
                     <Check className="w-3.5 h-3.5 text-green-400" />
-                    <span>Copied</span>
+                    <span>Copied!</span>
                   </>
                 ) : (
                   <>
@@ -116,21 +116,21 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-4">
                   <Check className="w-6 h-6" />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-1">Message Received!</h4>
-                <p className="text-sm text-zinc-400">Thanks for reaching out. Jigyasa will reply shortly.</p>
+                <h4 className="text-xl font-bold text-white mb-1">Message Landed!</h4>
+                <p className="text-sm text-zinc-400">Thanks for reaching out! I&apos;ll get back to you in no time.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-1.5">
-                    Your Name
+                    What should I call you?
                   </label>
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Alex Morgan"
+                    placeholder="Your Name"
                     className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-purple-500 focus:outline-none text-white text-sm placeholder-zinc-600 transition-colors"
                   />
                 </div>
@@ -143,20 +143,20 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="alex@studio.design"
+                    placeholder="you@domain.com"
                     className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-purple-500 focus:outline-none text-white text-sm placeholder-zinc-600 transition-colors"
                   />
                 </div>
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-zinc-400 mb-1.5">
-                    Project Details
+                    What&apos;s on your mind?
                   </label>
                   <textarea
                     rows={3}
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Tell me about your scope, timeline, or vision..."
+                    placeholder="Drop some details about your vision, timeline, or just say hi..."
                     className="w-full px-4 py-2.5 rounded-xl bg-zinc-900 border border-zinc-800 focus:border-purple-500 focus:outline-none text-white text-sm placeholder-zinc-600 resize-none transition-colors"
                   />
                 </div>
@@ -170,7 +170,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                     outlineOffset: '-3px',
                   }}
                 >
-                  <span>Send Inquiry</span>
+                  <span>Send It Over</span>
                   <Send className="w-4 h-4" />
                 </button>
               </form>

@@ -42,38 +42,35 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '' }) =>
     offset: ['start 0.8', 'end 0.2'],
   });
 
-  // Segment the text into paragraphs and bold sections
+  // Natural, human, and casual copy
   const paragraphs = useMemo(() => {
     return [
       {
         isBold: false,
-        text: "I’ve spent the last two years somewhere between Web3, marketing, events, content, fashion, travel, and way too many conversations with interesting people. I love making ideas look good, feel human, and stand out from the noise.",
+        text: "Over the last couple of years, I’ve been living somewhere between 3D worlds, Web3 culture, fashion shoots, late-night renders, and way too many chats with inspiring people. I like making wild ideas look effortless, feel deeply human, and cut straight through the endless digital noise.",
       },
       {
         isBold: true,
-        text: "Let’s make something people remember.",
+        text: "Let’s make something people actually remember.",
       },
     ];
   }, []);
 
-  // Calculate total characters count for progress calculation
   const totalChars = useMemo(() => {
     return paragraphs.reduce((acc, p) => acc + p.text.length, 0);
   }, [paragraphs]);
 
-  // Keep track of running character index
   let charCounter = 0;
 
   return (
     <div
       ref={containerRef}
-      className={`text-center font-medium leading-relaxed max-w-[560px] mx-auto text-[#D7E2EA] ${className}`}
+      className={`text-center font-medium leading-relaxed max-w-[580px] mx-auto text-[#D7E2EA] ${className}`}
       style={{
         fontSize: 'clamp(1rem, 2vw, 1.35rem)',
       }}
     >
       {paragraphs.map((p, pIdx) => {
-        // Split text into words to prevent unnatural mid-word breaks across lines
         const words = p.text.split(' ');
 
         return (
@@ -100,7 +97,6 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '' }) =>
                 );
               });
 
-              // Add space character after word if not the last word
               if (wIdx < words.length - 1) {
                 const spaceIndex = charCounter++;
                 const spaceStart = Math.max(0, spaceIndex / totalChars);

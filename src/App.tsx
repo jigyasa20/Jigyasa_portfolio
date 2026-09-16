@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import HeroSection from './components/sections/HeroSection';
 import SocialVideosSection from './components/sections/SocialVideosSection';
+import SocialAnalyticsSection from './components/sections/SocialAnalyticsSection';
 import AboutSection from './components/sections/AboutSection';
 import ServicesSection from './components/sections/ServicesSection';
 import BrandLogoWall from './components/sections/BrandLogoWall';
@@ -29,22 +30,25 @@ export function App() {
       className="w-full min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-sans antialiased relative selection:bg-[#B600A8] selection:text-white"
       style={{ overflowX: 'clip' }}
     >
-      {/* 1. Hero Section (With Jigyasa photo and adjusted name sizing) */}
+      {/* 1. Hero Section (Transparent cutout photo & balanced name size) */}
       <HeroSection onOpenContact={handleOpenContact} />
 
       {/* 2. Social Media Videos Showcase (Clickable video cards with modal player) */}
       <SocialVideosSection onSelectVideo={handleSelectVideo} />
 
-      {/* 3. About Section */}
+      {/* 3. Social Media Analytics (Views, followers, brand collabs & platform stats) */}
+      <SocialAnalyticsSection />
+
+      {/* 4. About Section (Natural, conversational storytelling) */}
       <AboutSection onOpenContact={handleOpenContact} />
 
-      {/* 4. Services Section */}
+      {/* 5. Services Section (Casual, human client offerings) */}
       <ServicesSection />
 
-      {/* 5. Brand Logo Wall (After Services Section) */}
+      {/* 6. Brand Logo Wall (Immediately after Services) */}
       <BrandLogoWall />
 
-      {/* 6. Projects Section */}
+      {/* 7. Projects Section (Sticky stacking scale cards) */}
       <ProjectsSection />
 
       {/* Footer */}

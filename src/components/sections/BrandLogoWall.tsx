@@ -10,17 +10,17 @@ interface BrandItem {
 
 const BRANDS: BrandItem[] = [
   { name: 'Polygon', category: 'Web3 & L2', symbol: '⬡' },
-  { name: 'Unreal Engine', category: '3D & Real-time', symbol: '✦' },
-  { name: 'Solana', category: 'Blockchain', symbol: '◎' },
-  { name: 'Blender', category: '3D Animation', symbol: '❖' },
-  { name: 'Adidas', category: 'Fashion & Footwear', symbol: '▲' },
-  { name: 'Nike', category: 'Apparel & 3D Renders', symbol: '✔' },
-  { name: 'Red Bull', category: 'Media & Events', symbol: '⚡' },
-  { name: 'Spotify', category: 'Digital Experiences', symbol: '●' },
-  { name: 'Binance', category: 'Crypto Ecosystem', symbol: '⯁' },
-  { name: 'Prada', category: 'Luxury Brand Design', symbol: '◆' },
+  { name: 'Unreal Engine', category: 'Real-time 3D', symbol: '✦' },
+  { name: 'Solana', category: 'Ecosystem', symbol: '◎' },
+  { name: 'Blender', category: '3D Creation', symbol: '❖' },
+  { name: 'Adidas', category: 'Apparel & Renders', symbol: '▲' },
+  { name: 'Nike', category: 'Digital Footwear', symbol: '✔' },
+  { name: 'Red Bull', category: 'Media & Energy', symbol: '⚡' },
+  { name: 'Spotify', category: 'Spatial Audio', symbol: '●' },
+  { name: 'Binance', category: 'Crypto & Web3', symbol: '⯁' },
+  { name: 'Prada', category: 'Luxury 3D Renders', symbol: '◆' },
   { name: 'Figma', category: 'Design Systems', symbol: '◰' },
-  { name: 'VaynerMedia', category: 'Creative Marketing', symbol: '★' },
+  { name: 'VaynerMedia', category: 'Content Campaigns', symbol: '★' },
 ];
 
 export const BrandLogoWall: React.FC = () => {
@@ -43,10 +43,10 @@ export const BrandLogoWall: React.FC = () => {
               className="text-[#0C0C0C] font-black uppercase tracking-tight leading-none text-center"
               style={{ fontSize: 'clamp(2.4rem, 6vw, 5.5rem)' }}
             >
-              Brands I&apos;ve Worked With
+              Teams I&apos;ve Created For
             </h2>
-            <p className="mt-3 text-xs sm:text-sm md:text-base text-[#0C0C0C]/60 max-w-xl mx-auto font-light leading-relaxed">
-              Partnering with global industry leaders across Web3, fashion, gaming, and creative advertising.
+            <p className="mt-3 text-xs sm:text-sm md:text-base text-[#0C0C0C]/65 max-w-xl mx-auto font-light leading-relaxed">
+              From global athletic brands and gaming powerhouses to decentralized protocols — here are some teams I’ve had the fun of creating with.
             </p>
           </FadeIn>
         </div>
